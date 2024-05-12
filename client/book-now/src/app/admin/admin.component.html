@@ -1,0 +1,32 @@
+<div id="buttons-holder-div" class="row d-flex justify-content-center">
+    <div class="col-lg-12 d-flex justify-content-center "><h1>Foglalások kezelése</h1><button class="btn btn-success" (click)="navigate('/createRestaurant')">Új étterem</button><button class="btn btn-danger" (click)="logout()">Kilépés</button></div>
+    <div class="col-lg-12 d-flex justify-content-center">
+        <div class="tr">
+            <div class="col-lg-10" *ngFor="let restaurant of restaurants">
+                <table>
+                    <thead>
+                        <caption>Név: {{restaurant.name}}, Cím: {{restaurant.address}}, Typus: {{restaurant.type}}</caption>
+                        <tr>
+                            <th>Dátum</th>
+                            <th>Benti?</th>
+                            <th>Ülőhelyek száma</th>
+                            <th>Foglalt?</th>
+                            <th><button class="btn btn-primary" id="createBtn" (click)="redirectWithParams('/createTable', restaurant.name)">Új hozzáadása</button></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let table of tables.get(restaurant.name)">
+                            <td>{{table.date}}</td>
+                            <td>{{table.indoor == true ? 'Igen' : 'Nem'}}</td>
+                            <td>{{table.seets}}</td>
+                            <td>{{table.booked == true ? 'Foglalt' : 'Szabad'}}</td>
+                            <td>
+                                <button class="btn btn-danger" (click)="delete(table._id)">Törlés</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+  </div>

@@ -1,0 +1,13 @@
+#buttons-holder-div{
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: rgb(228, 139, 23);
+    padding: 5%;
+    padding-bottom: 4%;
+    padding-top: 3%;
+}
+
+button{
+    margin: 2%;
+    margin-top: 5%;
+}

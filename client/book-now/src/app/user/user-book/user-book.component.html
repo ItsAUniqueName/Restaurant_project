@@ -1,0 +1,33 @@
+<div id="buttons-holder-div" class="row d-flex justify-content-center">
+    <div class="col-lg-12 d-flex justify-content-center "><h1>Foglalásaim</h1><button class="btn btn-danger" (click)="redirectWithParams('/user', email)">Vissza</button><button class="btn btn-danger" (click)="logout()">Kilépés</button></div>
+    <div class="col-lg-12 d-flex justify-content-center">
+        <div class="tr">
+            <div class="col-lg-10">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Étterem</th>
+                            <th>Benti?</th>
+                            <th>Ülőhelyek száma</th>
+                            <th>Időpnt</th>
+                            <th>Lefoglalás dátuma</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let oneReservation of reservation">
+                            <td>{{oneReservation.restaurantName}}</td>
+                            <td>{{tables?.get(oneReservation._id)?.indoor== true ? 'Igen' : 'Nem'}}</td>
+                            <td>{{tables?.get(oneReservation._id)?.seets}}</td>
+                            <td>{{tables?.get(oneReservation._id)?.date}}</td>
+                            <td>{{oneReservation.date}}</td>
+                            <td>
+                                <button class="btn btn-primary" (click)="deleteBook(oneReservation._id)">Foglalás törlése</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+  </div>

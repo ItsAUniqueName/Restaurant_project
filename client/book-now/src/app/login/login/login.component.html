@@ -1,0 +1,13 @@
+<div id="buttons-holder-div" class="row d-flex justify-content-center">
+    <form class="login-form" (ngSubmit)="login()">
+        <input [(ngModel)]="email" name="email" class="form-control" type="email" placeholder="Email" required />
+        <input [(ngModel)]="password" name="password" class="form-control" type="password" placeholder="Password" required />
+        <div class="col-lg-12 d-flex justify-content-center">   
+            <button class="btn btn-primary" type="submit">Belépés</button>
+            <button class="btn btn-secondary" type="button" (click)="navigate('/')">Mégse</button>
+        </div> 
+        <div *ngIf="errorMessage">
+            <p>{{errorMessage}}</p>
+        </div>
+    </form>
+</div>

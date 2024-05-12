@@ -1,0 +1,44 @@
+#buttons-holder-div{
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: rgb(228, 139, 23);
+    padding: 5%;
+    padding-bottom: 4%;
+    padding-top: 3%;
+}
+
+button{
+    margin: 2%;
+    margin-top: 5%;
+}
+
+input{
+    margin-bottom: 2%;
+}
+
+caption{
+    width: 400px;
+    margin: 10px;
+    font-weight: bold;
+}
+
+table{
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 20px;
+    padding: 5px;
+    width: 900px;
+}
+
+#createBtn{
+    width:150px;
+    margin: 5px;
+}
+
+td{
+    max-width: 200px;
+}
+
+th{
+    max-width: 200px;;
+}
