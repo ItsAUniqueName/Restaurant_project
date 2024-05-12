@@ -1,0 +1,6 @@
+A projektet windowson készítettem el, az ehhez szükséges docker file-hoz tartozó parancsok:
+
+docker pull mongo
+docker create mongo
+docker ps –a
+docker run --name mongo_v1 -d -p 6000:27017 mongo
